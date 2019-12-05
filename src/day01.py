@@ -1,6 +1,6 @@
 import math
 
-INPUT = "input/1.in"
+INPUT = "input/01.in"
 
 def read_input():
     with open(INPUT) as f:
