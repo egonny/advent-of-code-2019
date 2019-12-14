@@ -35,5 +35,15 @@ def find_cost(init_elem, init_amount, elem_map):
     return state["ORE"]
 
 elem_map = read_input()
+
+# PART 1
 cost = find_cost("FUEL", 1, elem_map)
 print(f"Part 1: {cost}")
+
+# PART 2
+i = 2 ** 21 # Did a check of all 2 ** x values beforehand
+cost = 0
+while cost < 1000000000000:
+    i += 1
+    cost = find_cost("FUEL", i, elem_map)
+print(f"Part 2: {i - 1}")
